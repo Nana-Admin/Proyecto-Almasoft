@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-<heat>
-    <meta charset="UFT-8">
-    <meta http-equiv="x-UA-compatible" content="IE=edge">
-    <meta name="viewport" concert="width-device-width, initial-scale-1.0">
-    <title>vistas admin </title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vistas admin</title>
     <link rel="stylesheet" href="styles.css">
-
-</heat>
+</head>
 <body>
-    <div class="formulario">;
-        <h1> inicio de sesion </h1>;
-        <form method="post">;
-            <div class="username">;
-                <input type="button">;
-                <label> nombre de usuario </label>;
+    <div class="formulario">
+        <h1>Inicio de sesión</h1>
+        <form method="post">
+            <div class="username">
+                <label>Nombre de usuario</label>
+                <input type="text" name="username">
             </div>
-            <div class="contraseña">;
-                <input type="passaword" requrired>;
-                <label> contrasena </label>;
+            <div class="contraseña">
+                <label>Contraseña</label>
+                <input type="password" name="password" required>
             </div>
-            <div class="comprobar"> Compruebe su usuario </div>;
-            <input  type="submit" value="comprobar">;
-            <div class="comprueba tu usuario">;
-              pide acceso a el <a href="#"> admin</a>;
+            <div class="comprobar">Compruebe su usuario</div>
+            <input type="submit" value="Comprobar">
+            <div class="acceso-admin">
+                ¿No tienes acceso? <a href="#">Pídelo al admin</a>
             </div>
         </form>
     </div>
-    
 </body>
+</html>
