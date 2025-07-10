@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
       box-sizing: border-box;
     }
@@ -390,7 +389,6 @@ body {
 }
 
 
-=======
 * {
       box-sizing: border-box;
     }
@@ -782,4 +780,394 @@ body {
 }
 
 
->>>>>>> 856621e9eb9b117d84efbbe499c18a2454807570
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #555; 
+    }
+
+
+    .barra-superior {
+      background-color: #C0C0C0;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .barra-superior input {
+      width: 400px;
+      padding: 5px;
+    }
+
+
+    .header {
+      background-color: #9A7DFF;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .nombre-sistema {
+      font-weight: bold;
+      background-color: white;
+      color: black;
+      padding: 5px 10px;
+      border: 2px solid black;
+    }
+
+    .usuario-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .usuario-info img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .icono-casa {
+      width: 24px;
+      height: 24px;
+    }
+
+    .layout {
+      display: flex;
+      height: calc(100vh - 90px);
+    }
+
+
+    .sidebar {
+      background-color: #C5A6F1;
+      width: 250px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sidebar .cuadro {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      padding: 15px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 3px 3px 0px #000;
+    }
+
+    .cuadro1{
+     background-color: gray;
+      color: black;
+      border: 2px solid black;
+      padding: 15px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 3px 3px 0px #000;
+    }
+
+    .sidebar .icono {
+      width: 16px;
+      height: 16px;
+    }
+
+    .contenido {
+      flex-grow: 1;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-content: flex-start;
+      background-color: #555;
+    }
+
+    
+    .contenido .cuadro {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      width: 150px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 3px 3px 0px #000;
+    }
+
+    .cat {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      width: 150px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 3px 3px 0px #000;
+    }
+
+    .contenido .icono {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #444;
+}
+
+.header {
+  background-color: #9A7DFF;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nombre-sistema {
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border: 2px solid black;
+}
+
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.usuario-info img {
+  width: 24px;
+  height: 24px;
+}
+
+.layout {
+  display: flex;
+  height: calc(100vh - 90px);
+}
+
+.sidebar {
+  background-color: #C5A6F1;
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar .cuadro {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 15px;
+  box-shadow: 3px 3px 0px #000;
+}
+
+.contenido {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+.titulo-seccion {
+  background-color: white;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid black;
+  width: fit-content;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 0px #000;
+}
+
+.barra-calendario {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.barra-calendario button {
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
+#mes-actual {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.calendario {
+  background-color: white;
+  padding: 30px;
+  border: 3px solid black;
+  box-shadow: 4px 4px 0px black;
+  border-radius: 10px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+
+
+
+.dias-semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.dias-mes {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.dia {
+  background-color: #fdfdfd;
+  font-weight: bold;
+  border: 2px solid #aaa;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #aaa;
+  transition: background-color 0.2s;
+
+  /* Cambios claves para hacerlo más ancho y no tan alto */
+  height: 80px;
+  min-width: 100px; /* Más ancho horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dia:hover {
+  background-color: #e0e0e0;
+}
+
+.dia.gris {
+  background-color: #eee;
+  color: #999;
+  border-style: dashed;
+}
+
+
+
+
+/* Contenedor general del calendario */
+.contenedor-calendario {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: max-content;
+}
+
+/* Días del calendario */
+.dia {
+  width: 50px;
+  height: 70px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  margin: 3px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.dia:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* Días deshabilitados */
+.dia.deshabilitado {
+  background-color: #dcdcdc;
+  color: #a0a0a0;
+  cursor: default;
+  border-style: dashed;
+  font-weight: normal;
+}
+
+/* Filas de semanas */
+.fila-semana {
+  display: flex;
+  justify-content: center;
+}
+
+/* Encabezado de días (DOM, LUN, MAR...) */
+.encabezado-dias {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.encabezado-dias div {
+  width: 50px;
+  text-align: center;
+}
+
+/* Botones anterior y siguiente */
+#anterior,
+#siguiente {
+  font-weight: bold;
+  padding: 5px 12px;
+  margin: 10px;
+  border: 2px solid black;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#anterior:hover,
+#siguiente:hover {
+  background-color: black;
+  color: white;
+}
+
+

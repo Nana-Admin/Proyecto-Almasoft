@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 body {
   background-color: #C5A6F1;
   margin: 0;
@@ -56,6 +57,65 @@ button:hover {
   color: black;
   text-decoration: underline;
 }
+=======
+body {
+  background-color: #C5A6F1;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.contenedor-formulario {
+  max-width: 500px;
+  margin: 100px auto;
+  background-color: white;
+  border: 2px solid black;
+  padding: 30px;
+  box-shadow: 5px 5px 0 black;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+select,
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 0 black;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #C5A6F1;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 black;
+}
+
+button:hover {
+  background-color: #b793e5;
+}
+
+.volver {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+  text-decoration: underline;
+}
+>>>>>>> 856621e9eb9b117d84efbbe499c18a2454807570
 =======
 body {
   background-color: #C5A6F1;

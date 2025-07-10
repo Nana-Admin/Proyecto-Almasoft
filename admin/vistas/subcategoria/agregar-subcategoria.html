@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -60,6 +61,69 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Subcategoría</title>
+  <link rel="stylesheet" href="agregar-subcategoria.css">
+</head>
+<body>
+  <div class="contenedor-formulario">
+    <h2>Agregar Subcategoría</h2>
+    <form id="form-subcategoria">
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" required>
+        <option value="">Seleccionar categoría</option>
+        <option value="Color">Color</option>
+        <option value="Estilo">Estilo</option>
+        <option value="Material">Material</option>
+        <option value="Tamaño">Tamaño</option>
+        <option value="Capacidad">Capacidad</option>
+        <option value="Diseños">Diseños</option>
+      </select>
+
+      <label for="subcategoria">Subcategoría:</label>
+      <input type="text" id="subcategoria" placeholder="Ej: Dorado" required>
+
+      <button type="submit">Guardar</button>
+    </form>
+    <a href="subcategporias.html" class="volver">← Volver</a>
+  </div>
+
+  <script src="agregar-subcategoria.js"></script>
+</body>
+</html>
+
+
+  <script>
+  document.getElementById("form-subcategoria").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const categoria = document.getElementById("categoria").value;
+    const subcategoria = document.getElementById("subcategoria").value.trim();
+
+    if (!categoria || !subcategoria) {
+      alert("Debes seleccionar una categoría y escribir una subcategoría.");
+      return;
+    }
+
+    // Obtener del localStorage
+    let datos = JSON.parse(localStorage.getItem("subcategorias")) || {};
+    if (!datos[categoria]) datos[categoria] = [];
+
+    datos[categoria].push(subcategoria);
+    localStorage.setItem("subcategorias", JSON.stringify(datos));
+
+    alert("Subcategoría guardada correctamente.");
+    window.location.href = "subcategporias.html"; // Corrige el nombre del archivo
+  });
+</script>
+
+</body>
+</html>
+>>>>>>> 856621e9eb9b117d84efbbe499c18a2454807570
 =======
 <!DOCTYPE html>
 <html lang="es">
