@@ -1,0 +1,382 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #555;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* HEADER GENERAL ALMASOFT */
+.header {
+  background-color: #9A7DFF;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nombre-sistema {
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border: 2px solid black;
+}
+
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario-info img {
+  width: 24px;
+  height: 24px;
+}
+
+.icono-casa {
+  width: 24px;
+  height: 24px;
+}
+
+/* LAYOUT GENERAL */
+.layout {
+  display: flex;
+  height: calc(100vh - 90px);
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* SIDEBAR */
+.sidebar {
+  background-color: #C5A6F1;
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar .cuadro,
+.cuadro1 {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 3px 3px 0px #000;
+}
+
+.sidebar .icono {
+  width: 16px;
+  height: 16px;
+}
+
+/* CONTENIDO CONTACTOS */
+.container {
+  flex: 1;
+  margin: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 30px;
+}
+
+
+
+/* HEADER CONTACTOS (ESPECÍFICO) */
+.header-contactos {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.header-contactos h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.header-contactos p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* CONTENIDO PRINCIPAL DE CONTACTOS */
+.content {
+  padding: 30px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px 25px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+#searchInput::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Tabla de contactos */
+.table-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  table-layout: auto; /* más flexible */
+}
+
+
+.contacts-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.contacts-table td {
+  padding: 20px;
+  vertical-align: middle;
+  word-break: break-word; /* evita desbordes */
+}
+
+.contacts-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.contacts-table tbody tr:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contacts-table td {
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.name-cell {
+  font-weight: 500;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.actions-cell {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Botones de acción */
+.action-button {
+  background: none;
+  border: none;
+  padding: 10px 12px;
+  margin: 0 3px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:active {
+  transform: translateY(-1px);
+}
+
+/* Colores por acción */
+.delete-btn:hover {
+  background-color: #fee;
+  color: #e53e3e;
+}
+
+.edit-btn:hover {
+  background-color: #f0f8ff;
+  color: #3182ce;
+}
+
+.action-button:nth-child(2):hover {
+  background-color: #f0fff0;
+  color: #38a169;
+}
+
+.action-button:nth-child(4):hover {
+  background-color: #fffbf0;
+  color: #d69e2e;
+}
+
+.action-button:nth-child(5):hover {
+  background-color: #f7fafc;
+  color: #718096;
+}
+
+/* Animaciones de filas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contacts-table tbody tr {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.contacts-table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.contacts-table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.contacts-table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.contacts-table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+.contacts-table tbody tr:nth-child(5) { animation-delay: 0.5s; }
+.contacts-table tbody tr:nth-child(6) { animation-delay: 0.6s; }
+.contacts-table tbody tr:nth-child(7) { animation-delay: 0.7s; }
+.contacts-table tbody tr:nth-child(8) { animation-delay: 0.8s; }
+.contacts-table tbody tr:nth-child(9) { animation-delay: 0.9s; }
+.contacts-table tbody tr:nth-child(10) { animation-delay: 1.0s; }
+.contacts-table tbody tr:nth-child(11) { animation-delay: 1.1s; }
+
+/* Tooltip para botones */
+.action-button::before {
+  content: attr(title);
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.action-button:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Scrollbar personalizado */
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .header-contactos h1 {
+    font-size: 2em;
+  }
+
+  .contacts-table th,
+  .contacts-table td {
+    padding: 15px 10px;
+  }
+
+  .action-button {
+    font-size: 16px;
+    min-width: 36px;
+    height: 36px;
+  }
+
+  .name-cell {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-contactos h1 {
+    font-size: 1.8em;
+  }
+
+  .contacts-table th,
+  .contacts-table td {
+    padding: 12px 8px;
+  }
+
+  .action-button {
+    font-size: 14px;
+    min-width: 32px;
+    height: 32px;
+  }
+
+  #searchInput {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}

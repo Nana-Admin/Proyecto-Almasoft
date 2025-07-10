@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(150deg, #6c3483, #9b59b6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    width: 400px;
+    background: #ffffffcc;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.formulario h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+.input-box input {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #6c3483;
+    box-shadow: 0 0 5px #6c3483aa;
+}
+
+.comprobar {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #6c3483;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #5a2e70;
+}
+
+.acceso-admin {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.acceso-admin a {
+    color: #6c3483;
+    text-decoration: none;
+}
+
+.acceso-admin a:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #555;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* HEADER GENERAL ALMASOFT */
+.header {
+  background-color: #9A7DFF;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nombre-sistema {
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border: 2px solid black;
+}
+
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario-info img {
+  width: 24px;
+  height: 24px;
+}
+
+.icono-casa {
+  width: 24px;
+  height: 24px;
+}
+
+/* LAYOUT GENERAL */
+.layout {
+  display: flex;
+  height: calc(100vh - 90px);
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* SIDEBAR */
+.sidebar {
+  background-color: #C5A6F1;
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar .cuadro,
+.cuadro1 {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 3px 3px 0px #000;
+}
+
+.sidebar .icono {
+  width: 16px;
+  height: 16px;
+}
+.barra-herramientas {
+  position: fixed;
+  top: 60px; 
+  right: 0;
+  width: 60px;
+  height: calc(100vh - 60px);
+  background-color: white;
+  border-left: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.barra-herramientas button {
+  background: none;
+  border: none;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.barra-herramientas img {
+  width: 24px;
+  height: 24px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.barra-herramientas {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 60px;
+  height: calc(100vh - 60px);
+  background-color: white;
+  border-left: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.barra-herramientas button {
+  background: none;
+  border: none;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.barra-herramientas img {
+  width: 24px;
+  height: 24px;
+}
+.contenido-principal {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(73, 67, 67);
+  padding: 40px;
+}
+
+.botones-centrados {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.boton-rol {
+  padding: 100px 100px;
+  font-size: 18px;
+  background-color: #764ba2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
