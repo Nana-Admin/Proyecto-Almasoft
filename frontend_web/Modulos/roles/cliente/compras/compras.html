@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #b502fc;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        .producto, .resumen, .metodo-pago {
+            background: white;
+            padding: 1em;
+            margin: 1em auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .producto img {
+            width: 100px;
+            height: 100px;
+        }
+        .producto button, .resumen button, .metodo-pago button {
+            background: #2a7cff;
+            color: white;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .producto-item, .resumen-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0.5em 0;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+    </header>
+
+    <div class="producto">
+        <h2>Productos</h2>
+        <div class="producto-item">
+            <span>Ataúd - $1.200.000</span>
+            <button onclick="agregarAlCarrito('Ataúd', 1200000)">Agregar</button>
+        </div>
+        <div class="producto-item">
+            <span>Lápida - $150.000</span>
+            <button onclick="agregarAlCarrito('Lápida', 150000)">Agregar</button>
+        </div>
+        <div class="producto-item">
+            <span>Urna - $300.000</span>
+            <button onclick="agregarAlCarrito('Urna', 300000)">Agregar</button>
+        </div>
+        <div class="producto-item">
+            <span>Arreglo Floral - $380.000</span>
+            <button onclick="agregarAlCarrito('Arreglo Floral', 380000)">Agregar</button>
+        </div>
+        <div class="producto-item">
+            <span>Plan A - $150.000</span>
+            <button onclick="agregarAlCarrito('Plan A', 150000)">Agregar</button>
+        </div>
+    </div>
+
+    <div class="resumen hidden" id="resumen">
+        <h2>Resumen de compra</h2>
+        <div id="lista-resumen"></div>
+        <p><strong>Total: $<span id="total">0</span></strong></p>
+        <button onclick="mostrarMetodoPago()">Continuar</button>
+    </div>
+
+    <div class="metodo-pago hidden" id="metodo-pago">
+        <h2>Elige cómo pagar</h2>
+        <div>
+            <input type="radio" name="pago" id="debito"><label for="debito"> Tarjeta de débito</label><br>
+            <input type="radio" name="pago" id="credito"><label for="credito"> Tarjeta de crédito</label><br>
+            <input type="radio" name="pago" id="pse"><label for="pse"> Transferencia con PSE</label><br>
+            <input type="radio" name="pago" id="efecty"><label for="efecty"> Efecty</label>
+        </div>
+        <br>
+        <button onclick="finalizarCompra()">Finalizar</button>
+    </div>
+
+    <script>
+        const carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            actualizarResumen();
+        }
+
+        function actualizarResumen() {
+            const resumen = document.getElementById('resumen');
+            const lista = document.getElementById('lista-resumen');
+            const total = document.getElementById('total');
+            let suma = 0;
+            lista.innerHTML = '';
+            carrito.forEach(item => {
+                lista.innerHTML += `<div class="resumen-item"><span>${item.nombre}</span><span>$${item.precio.toLocaleString()}</span></div>`;
+                suma += item.precio;
+            });
+            total.textContent = suma.toLocaleString();
+            resumen.classList.remove('hidden');
+        }
+
+        function mostrarMetodoPago() {
+            document.getElementById('resumen').classList.add('hidden');
+            document.getElementById('metodo-pago').classList.remove('hidden');
+        }
+
+        function finalizarCompra() {
+            alert("Gracias por su compra. Recibirá una confirmación por correo electrónico.");
+        }
+    </script>
+</body>
+</html>
+
