@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Compras</title>
+  <link rel="stylesheet" href="reporte.css">
+</head>
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>REGISTRO</th>
+        <th>FECHA</th>
+        <th>NOMBRES Y APELLIDOS</th>
+        <th>M.PAGO</th>
+        <th>ESTADO</th>
+        <th>COMPRA</th>
+        <th>DETALLE</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-body">
+     
+    </tbody>
+  </table>
+
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h2>DETALLES DE LA COMPRA</h2>
+      <div class="detalle-info" id="contenido-modal">
+       
+      </div>
+    </div>
+  </div>
+
+  <script src="reporte.js"></script>
+</body>
+</html>
