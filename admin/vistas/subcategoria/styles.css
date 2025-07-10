@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
       box-sizing: border-box;
     }
@@ -347,3 +348,354 @@ body {
 
 
 
+=======
+* {
+      box-sizing: border-box;
+    }
+
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; 
+}
+
+
+
+    .barra-superior {
+      background-color: #C0C0C0;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .barra-superior input {
+      width: 400px;
+      padding: 5px;
+    }
+
+
+   .header {
+  height: 60px;
+  background-color: white;  
+  color: black;             
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+    .nombre-sistema {
+      font-weight: bold;
+      background-color: white;
+      color: black;
+      padding: 5px 10px;
+      border: 2px solid black;
+    }
+
+    .usuario-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .usuario-info img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .icono-casa {
+      width: 24px;
+      height: 24px;
+    }
+
+   .layout {
+  display: flex;
+  height: calc(100vh - 60px);
+   border-right: 2px solid black 
+}
+
+
+    .sidebar {
+      background-color: #C5A6F1;
+      width: 250px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sidebar .cuadro {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      padding: 15px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 3px 3px 0px #000;
+    }
+
+    .cuadro1{
+     background-color: white;
+      color: black;
+      border: 2px solid black;
+      padding: 15px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 3px 3px 0px #000;
+    }
+
+    .sidebar .icono {
+      width: 16px;
+      height: 16px;
+    }
+
+.contenido {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #555;
+  padding: 20px;
+  margin-right: 60px; 
+  flex-grow: 1;
+  gap: 20px;
+  height: calc(100vh - 60px); 
+}
+
+
+    
+    .contenido .cuadro {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      width: 150px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 3px 3px 0px #000;
+    }
+.cat {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  width: 230px;
+  min-height: 60px;
+  box-shadow: 3px 3px 0px #000;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+}
+
+    .contenido .icono {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      width: 16px;
+      height: 16px;
+    }
+    .cuadro2{
+     background-color: gray;
+      color: black;
+      border: 2px solid black;
+      padding: 15px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 3px 3px 0px #000;
+    }
+    body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.header {
+  height: 60px;
+  background-color: #C5A6F1;  
+  color: black;              
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+
+.barra-herramientas {
+  position: fixed;
+  top: 60px; 
+  right: 0;
+  width: 60px;
+  height: calc(100vh - 60px);
+  background-color: white;
+  border-left: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.barra-herramientas button {
+  background: none;
+  border: none;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.barra-herramientas img {
+  width: 24px;
+  height: 24px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.barra-herramientas {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 60px;
+  height: calc(100vh - 60px);
+  background-color: white;
+  border-left: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.barra-herramientas button {
+  background: none;
+  border: none;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.barra-herramientas img {
+  width: 24px;
+  height: 24px;
+}
+.titulo {
+  text-align: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.opciones {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none; 
+}
+
+.opciones li {
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+}
+.linea-vertical {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  width: 2px;
+  height: 100vh;
+  background-color: black;
+  z-index: 20;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-contenido h2 {
+  margin-top: 0;
+}
+
+.modal-contenido label {
+  display: block;
+  margin-top: 10px;
+}
+
+.modal-contenido input, .modal-contenido select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-contenido button {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-contenido .cerrar {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+  color: red;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.cerrar {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+
+>>>>>>> 856621e9eb9b117d84efbbe499c18a2454807570
