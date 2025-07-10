@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Asignar Responsable</title>
+  <link rel="stylesheet" href="asignacion.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="nombre-sistema">ALMASOFT</div>
+    <div class="usuario-info">
+      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="usuario">
+      <span>DANNY KARINE CAMACHO ROMERO</span>
+      <a href="../principal/principal.html">
+        <img class="icono-casa" src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="home">
+      </a>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="sidebar">
+    
+      <div class="cuadro">CLIENTES</div>
+      <div class="cuadro">USUARIOS</div>
+      <div class="cuadro">CATEGORIAS</div>
+      <div class="cuadro">SUB-CATEGORIAS</div>
+      <div class="cuadro">PRODUCTOS</div>
+      <div class="cuadro">COMPRAS</div>
+      <div class="cuadro">TRÁMITES</div>
+      <div class="cuadro">CRONOGRAMA</div>
+      <div class="cuadro">REPORTES</div>
+    </div>
+
+    <div class="contenido">
+      <div class="cat" id="titulo-asignacion">ASIGNAR</div>
+      <div class="info-dia" id="info-dia">Cargando...</div>
+
+      <form id="form-asignacion">
+        <label for="responsable">Seleccionar responsable:</label>
+        <select id="responsable" required>
+          <option value="">--Seleccione--</option>
+          <option value="asesor1">Asesor 1</option>
+          <option value="asesor2">Asesor 2</option>
+          <option value="admin1">Administrador</option>
+        </select>
+        <br><br>
+        <button type="submit">Asignar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="asignacion.js"></script>
+</body>
+</html>
