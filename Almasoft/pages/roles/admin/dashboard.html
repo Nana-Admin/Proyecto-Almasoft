@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | ALMASOFT</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <div class="logo">ALMASOFT</div>
+      <nav class="menu">
+        <button onclick="location.href='../../clientes/clientes.html'">Clientes</button>
+        <button>Usuarios</button>
+        <button>Categorías</button>
+        <button>Subcategorías</button>
+        <button>Productos</button>
+        <button>Compras</button>
+        <button>Trámites</button>
+        <button>Cronograma</button>
+        <button>Reportes</button>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+
+      <!-- Barra superior -->
+      <header class="topbar">
+        <a href="./perfil/perfil.html" class="admin-info">
+          <img src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-256.png" alt="admin">
+          <span class="admin-name">Danny Karine Camacho Romero</span>
+        </a>
+      </header>
+
+      <!-- Tarjetas resumen -->
+      <section class="cards-summary">
+        <div class="card">⚰️ Sepelios: <strong>3</strong></div>
+        <div class="card">🕯️ Velaciones: <strong>2</strong></div>
+        <div class="card">⛪ Misas: <strong>1</strong></div>
+        <div class="card">🥀Exhumaciones: <strong>4</strong></div>
+        <div class="card">👤 Clientes: <strong>5</strong></div>
+        <div class="card">📦 Compras: <strong>3</strong></div>
+        <div class="card">📜 Trámites: <strong>7</strong></div>
+      </section>
+
+      <!-- Gráfica de servicios -->
+      <section class="chart-section">
+        <canvas id="servicesChart"></canvas>
+      </section>
+
+
+
+      <!-- Botones centrales -->
+      <section class="central-buttons">
+        <button onclick="location.href='../../clientes/clientes.html'">Clientes</button>
+        <button>Usuarios</button>
+        <button>Categorías</button>
+        <button>Subcategorías</button>
+        <button>Productos</button>
+        <button>Compras</button>
+        <button>Trámites</button>
+        <button>Cronograma</button>
+        <button>Reportes</button>
+      </section>
+      <!-- Tarjetas de progreso -->
+<section class="progress-cards">
+  <div class="progress-card">
+    <h3>Trámites completados</h3>
+    <div class="progress-bar">
+      <div class="progress" style="width: 90%;">90%</div>
+    </div>
+  </div>
+  <div class="progress-card">
+    <h3>Compras procesadas</h3>
+    <div class="progress-bar">
+      <div class="progress" style="width: 65%;">65%</div>
+    </div>
+  </div>
+</section>
+<!-- Lista de clientes recientes -->
+<section class="recent-clients">
+  <h3>Clientes Recientes</h3>
+  <ul>
+    <li><strong>Jorge Mendez</strong> — 22/07/2025</li>
+    <li><strong>Sofía García</strong> — 21/07/2025</li>
+    <li><strong>Laura Ruiz</strong> — 20/07/2025</li>
+  </ul>
+</section>
+<!-- Alertas rápidas -->
+<section class="alerts">
+  <h3>Alertas</h3>
+  <div class="alert red">📜 Pendientes de asignación: 3 trámites</div>
+  <div class="alert yellow">📦 Productos por confirmar: 2 compras</div>
+</section>
+<!-- Mensajes rápidos -->
+<section class="quick-messages">
+  <h3>Mensajes</h3>
+  <div class="message">
+    <strong>Admin:</strong> Reunión con asesores a las 4:00 PM.
+  </div>
+  <div class="message">
+    <strong>Sistema:</strong> Nuevas solicitudes de sepelio registradas.
+  </div>
+</section>
+<!-- Resumen inteligente -->
+<section class="smart-summary">
+  <h3>Resumen del Día</h3>
+  <p>Hoy se realizaron <strong>3 sepelios</strong>, <strong>2 velaciones</strong> y se registraron <strong>5 nuevos clientes</strong>.</p>
+</section>
+<section class="clientes-recientes">
+  <h2>Clientes Recientes</h2>
+  <ul class="lista-clientes">
+    <li>
+      <span class="nombre">Carlos Mendoza</span>
+      <span class="correo">carlos@example.com</span>
+      <span class="fecha">24 Jul 2025</span>
+    </li>
+    <li>
+      <span class="nombre">Lucía Torres</span>
+      <span class="correo">lucia@example.com</span>
+      <span class="fecha">23 Jul 2025</span>
+    </li>
+    <li>
+      <span class="nombre">Julián Rivera</span>
+      <span class="correo">julian@example.com</span>
+      <span class="fecha">22 Jul 2025</span>
+    </li>
+    <li>
+      <span class="nombre">Andrea López</span>
+      <span class="correo">andrea@example.com</span>
+      <span class="fecha">21 Jul 2025</span>
+    </li>
+  </ul>
+</section>
+<section class="alertas">
+  <h2>Alertas del Sistema</h2>
+  <div class="alerta alerta-roja">
+    <strong>¡Pendiente!</strong> Hay trámites sin asignar esta semana.
+  </div>
+  <div class="alerta alerta-amarilla">
+    <strong>Recordatorio:</strong> Revisar agenda de misas para el sábado.
+  </div>
+  <div class="alerta alerta-verde">
+    <strong>Correcto:</strong> Todas las compras han sido confirmadas.
+  </div>
+</section>
+<section class="estadisticas">
+  <h2>Comparativo de Servicios</h2>
+  <canvas id="graficoServicios" width="400" height="200"></canvas>
+</section>
+<section class="mensajes-rapidos">
+  <h3>Mensajes Rápidos</h3>
+  <div class="mensaje">
+    <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="usuario" />
+    <div class="contenido">
+      <div class="nombre-hora">
+        <strong>Laura G.</strong>
+        <span class="hora">09:20 AM</span>
+      </div>
+      <p>¿Se confirmó la misa para el viernes?</p>
+    </div>
+  </div>
+  <div class="mensaje">
+    <img src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="usuario" />
+    <div class="contenido">
+      <div class="nombre-hora">
+        <strong>Andrés R.</strong>
+        <span class="hora">08:47 AM</span>
+      </div>
+      <p>El cliente aceptó el presupuesto.</p>
+    </div>
+  </div>
+  <div class="mensaje">
+    <img src="https://cdn-icons-png.flaticon.com/512/219/219970.png" alt="usuario" />
+    <div class="contenido">
+      <div class="nombre-hora">
+        <strong>Carlos F.</strong>
+        <span class="hora">Ayer</span>
+      </div>
+      <p>Necesito apoyo con el trámite 032.</p>
+    </div>
+  </div>
+</section>
+<section class="estadisticas-comparativas">
+  <h3>Estadísticas Comparativas</h3>
+  <canvas id="graficaComparativa" width="400" height="220"></canvas>
+</section>
+<section class="resumen-inteligente">
+  <div class="contenido-resumen">
+    <img src="https://cdn-icons-png.flaticon.com/512/3845/3845686.png" alt="IA Icono" class="icono-ia" />
+    <div>
+      <h3>Resumen Inteligente</h3>
+      <p id="mensajeIA">Analizando datos actuales... cargando predicción.</p>
+    </div>
+  </div>
+</section>
+<section class="accesos-rapidos">
+  <h3>Accesos Rápidos</h3>
+  <div class="botones-acceso">
+    <button onclick="location.href='clientes.html'">
+      <i class="fa-solid fa-user-plus"></i> Registrar Cliente
+    </button>
+    <button onclick="location.href='productos.html'">
+      <i class="fa-solid fa-box-open"></i> Agregar Producto
+    </button>
+    <button onclick="location.href='asignacion.html'">
+      <i class="fa-solid fa-calendar-check"></i> Asignar Servicio
+    </button>
+    <button onclick="location.href='reportes.html'">
+      <i class="fa-solid fa-chart-line"></i> Generar Reporte
+    </button>
+  </div>
+</section>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+
+
+
+
+
+
+
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,384 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f6fa;
+  margin: 0;
+  padding: 0;
+}
+
+.perfil-container {
+  max-width: 800px;
+  margin: 60px auto;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.perfil-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #4A90E2;
+}
+
+.perfil-nombre {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+}
+
+.perfil-rol {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.perfil-datos {
+  text-align: left;
+  margin-top: 30px;
+  padding: 0 10px;
+  color: #444;
+  line-height: 1.8;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Layout principal */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #1e1e2f;
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.logo {
+  text-decoration: none;
+  color: #ffffff; /* el color que tenías antes */
+  font-weight: bold;
+  font-size: 24px;
+  display: block;
+  padding: 0.2px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar nav button:hover {
+  background-color: #2f2f45;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+  margin-left: 220px;
+  padding: 30px;
+  width: calc(100% - 220px);
+  overflow-x: hidden;
+}
+
+/* Barra superior */
+.topbar {
+  background-color: #9900ff;
+  color: #000;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Info admin */
+.admin-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+.admin-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.admin-name {
+  font-weight: bold;
+}
+/* Estilos para Gestión de Usuarios */
+/* Sección de Gestión de Usuarios */
+.usuarios-section {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+/* Encabezado */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.encabezado h2 {
+  font-size: 26px;
+  color: #333;
+}
+
+/* Botón Agregar Usuario */
+.btn-agregar-usuario {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-agregar-usuario:hover {
+  background: linear-gradient(135deg, #45a049, #3e8e41);
+}
+
+/* Tabla de Usuarios */
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  padding: 14px 16px;
+  background-color: #f9f9f9;
+  text-align: left;
+  border: none;
+  font-size: 15px;
+}
+
+.tabla-usuarios th {
+  background-color: #eaeaea;
+  font-weight: bold;
+  color: #444;
+  border-bottom: 2px solid #ccc;
+}
+
+.tabla-usuarios tr:hover td {
+  background-color: #f1f1f1;
+}
+
+/* Modal de Usuario */
+.modal-usuario {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 550px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.modal-contenido h3 {
+  margin-top: 0;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Campos del Formulario */
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #555;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border 0.3s;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: #4A90E2;
+  outline: none;
+}
+
+/* Acciones */
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.acciones button {
+  padding: 10px 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.acciones button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.acciones button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.acciones button[type="button"] {
+  background-color: #f44336;
+  color: white;
+}
+
+.acciones button[type="button"]:hover {
+  background-color: #d32f2f;
+}
+
+/* Animación de aparición del modal */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Botones tabla */
+.tabla-usuarios button {
+  margin: 0 3px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.tabla-usuarios button:hover {
+  transform: scale(1.2);
+}
+
+/* Switch moderno */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  margin-left: 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 22px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+.oculto {
+  display: none;
+}
+
+

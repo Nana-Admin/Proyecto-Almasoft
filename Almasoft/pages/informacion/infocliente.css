@@ -1,0 +1,332 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f6fa;
+  margin: 0;
+  padding: 0;
+}
+
+.perfil-container {
+  max-width: 800px;
+  margin: 60px auto;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.perfil-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #4A90E2;
+}
+
+.perfil-nombre {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+}
+
+.perfil-rol {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.perfil-datos {
+  text-align: left;
+  margin-top: 30px;
+  padding: 0 10px;
+  color: #444;
+  line-height: 1.8;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Layout principal */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #1e1e2f;
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.logo {
+  text-decoration: none;
+  color: #ffffff; /* el color que tenías antes */
+  font-weight: bold;
+  font-size: 24px;
+  display: block;
+  padding: 0.2px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar nav button:hover {
+  background-color: #2f2f45;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+  margin-left: 220px;
+  padding: 30px;
+  width: calc(100% - 220px);
+  overflow-x: hidden;
+}
+
+/* Barra superior */
+.topbar {
+  background-color: #9900ff;
+  color: #000;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Info admin */
+.admin-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+.admin-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.admin-name {
+  font-weight: bold;
+}
+.cliente-perfil {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  margin-top: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  gap: 40px;
+}
+
+.foto-cliente img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #9900ff;
+  background-color: #f0f0f0;
+}
+
+.datos-cliente {
+  flex: 1;
+}
+
+.datos-cliente h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #1e1e2f;
+}
+
+.datos-cliente p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.datos-cliente p strong {
+  color: #222;
+  font-weight: 600;
+}
+
+/* Botones */
+.acciones-cliente {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.acciones-cliente button {
+  background-color: #9900ff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.acciones-cliente button:hover {
+  background-color: #7c00cc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+  background: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.modal-contenido label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.modal-contenido input, .modal-contenido select {
+  width: 100%;
+  padding: 7px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-contenido button {
+  background-color: #1d72b8;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.cerrar {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#formEditar label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#formEditar input,
+#formEditar select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#formEditar button {
+  background-color: #0c67a3;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#formEditar button:hover {
+  background-color: #084d7d;
+}
+
+
+
+
+

@@ -1,0 +1,186 @@
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* CONTENEDOR GENERAL */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #1e1e2f;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.logo {
+  text-decoration: none;
+  color: #ffffff; /* el color que tenías antes */
+  font-weight: bold;
+  font-size: 24px;
+  display: block;
+  padding: 0.2px;
+}
+
+.sidebar nav {  
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar nav button:hover {
+  background-color: #2f2f45;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+  margin-left: 220px;
+  padding: 40px;
+  width: calc(100% - 220px);
+  background-color: #f3f6fa;
+}
+
+/* PERFIL */
+.perfil-container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  gap: 40px;
+}
+
+/* Lado Izquierdo */
+.perfil-lado-izquierdo {
+  width: 280px;
+  text-align: center;
+}
+
+.perfil-lado-izquierdo img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #4A90E2;
+}
+
+.perfil-lado-izquierdo h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.perfil-lado-izquierdo p {
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0 30px;
+}
+
+.botones-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.botones-acciones button {
+  padding: 10px;
+  background-color: #1c1c2e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.botones-acciones button:hover {
+  background-color: #2f2f45;
+}
+
+/* Lado Derecho */
+.perfil-lado-derecho {
+  flex: 1;
+}
+
+.perfil-lado-derecho form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.perfil-lado-derecho label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #444;
+}
+
+.perfil-lado-derecho input,
+.perfil-lado-derecho select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+#botones-guardar-cancelar {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#botones-guardar-cancelar button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #1e1e2f;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#botones-guardar-cancelar button:hover {
+  background-color: #2f2f45;
+}
+
+
+
+
+
+
