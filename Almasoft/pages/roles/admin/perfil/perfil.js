@@ -12,7 +12,7 @@ function cancelarEdicion() {
 
 function cerrarSesion() {
   if (confirm("¿Estás seguro de que quieres cerrar sesión?")) {
-    window.location.href = "../../login.html"; // Redirige a la página de inicio de sesión
+    window.location.href = "../../../login.html"; // Redirige a la página de inicio de sesión
   }
 }
 

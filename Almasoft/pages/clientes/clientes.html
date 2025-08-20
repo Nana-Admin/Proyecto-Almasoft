@@ -16,14 +16,14 @@
 
         <nav class="menu">
           <button onclick="location.href='../clientes/clientes.html'">Clientes</button>
-          <button>Usuarios</button>
-          <button>Categorías</button>
-          <button>Subcategorías</button>
-          <button>Productos</button>
-          <button>Compras</button>
-          <button>Trámites</button>
-          <button>Cronograma</button>
-          <button>Reportes</button>
+          <button onclick="location.href='../usuarios/usuarios.html'">Usuarios</button>
+          <button onclick="location.href='../categorias/categorias.html'">Categorías</button>
+          <button onclick="location.href='../subcategorias/subcategorias.html'">Subcategorías</button>
+          <button onclick="location.href='../productos/productos.html'">Productos</button>
+          <button onclick="location.href='../compras/compras.html'">Compras</button>
+          <button onclick="location.href='../tramites/tramites.html'">Trámites</button>
+          <button onclick="location.href='../cronograma/cronograma.html'">Cronograma</button>
+          <button onclick="location.href='../reportes/reportes.html'">Reportes</button>
         </nav>
       </aside>
 
@@ -62,11 +62,29 @@
         </tr>
       </thead>
       <tbody id="cuerpo-tabla-usuarios">
-        <!-- Aquí se insertarán los usuarios -->
+  <!-- Aquí se insertarán los usuarios -->
+  <tr>
+    <td>Juan</td>
+    <td>Pérez</td>
+    <td>C.C.</td>
+    <td>123456789</td>
+    <td>310 456 7890</td>
+    <td>example</td>
+    <td>Premium</td>
+    <td>Calle 123 #45-67</td>
+    <td>
+      <button class="btn-info" onclick="verInfoCliente('123456789')">📝</button>
+      <button class="btn-beneficiarios" onclick="verBeneficiarios('123456789')">👥</button>
+      <button class="btn-cronograma" onclick="verCronograma('123456789')">🕝</button>
+      <button class="btn-deshabilitar" onclick="mostrarSwitch(this)">🔍</button>
+      <label class="switch oculto">
+        <input type="checkbox" onchange="toggleUsuario(this)" checked>
+        <span class="slider"></span>
+      </label>
+      <button class="btn-eliminar" onclick="eliminarUsuario(this)">🗑️</button>
+    </td>
+  </tr>
 
-      </tbody>
-    </table>
-  </section>
 
   <!-- Formulario emergente -->
   <div class="modal-usuario" id="modalUsuario">
