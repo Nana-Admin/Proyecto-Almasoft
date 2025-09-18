@@ -1,0 +1,150 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | ALMASOFT</title>
+    <link rel="stylesheet" href="clientes.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+
+      <!-- Menú lateral -->
+      <aside class="sidebar">
+        <a href="../roles/admin/dashboard.html" class="logo">ALMASOFT</a>
+
+        <nav class="menu">
+          <button onclick="location.href='../clientes/clientes.html'">Clientes</button>
+          <button onclick="location.href='../usuarios/usuarios.html'">Usuarios</button>
+          <button onclick="location.href='../categorias/categorias.html'">Categorías</button>
+          <button onclick="location.href='../subcategorias/subcategorias.html'">Subcategorías</button>
+          <button onclick="location.href='../productos/productos.html'">Productos</button>
+          <button onclick="location.href='../compras/compras.html'">Compras</button>
+          <button onclick="location.href='../tramites/tramites.html'">Trámites</button>
+          <button onclick="location.href='../cronograma/cronograma.html'">Cronograma</button>
+          <button onclick="location.href='../reportes/reportes.html'">Reportes</button>
+        </nav>
+      </aside>
+
+      <!-- Contenido principal -->
+      <main class="main-content">
+
+        <!-- Barra superior -->
+        <header class="topbar">
+        <a href="../roles/admin/perfil/perfil.html" class="admin-info">
+
+          <img src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-256.png" alt="admin">
+          <span class="admin-name">Danny Karine Camacho Romero</span>
+        </a>
+      </header>
+
+
+        <section class="usuarios-section">
+    <div class="encabezado">
+      <h2>Gestión de Clientes</h2>
+      <button class="btn-agregar-usuario" onclick="abrirFormularioUsuario()">Agregar Cliente</button>
+    </div>
+
+    <!-- Tabla vacía por ahora, solo estructura -->
+    <table class="tabla-usuarios">
+      <thead>
+        <tr>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Tipo Doc</th>
+          <th>N° Doc</th>
+          <th>Celular</th>
+          <th>Correo</th>
+          <th>Tipo de Plan</th>
+          <th>Dirección</th>
+           <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo-tabla-usuarios">
+  <!-- Aquí se insertarán los usuarios -->
+  <tr>
+    <td>Juan</td>
+    <td>Pérez</td>
+    <td>C.C.</td>
+    <td>123456789</td>
+    <td>310 456 7890</td>
+    <td>example</td>
+    <td>Premium</td>
+    <td>Calle 123 #45-67</td>
+    <td>
+      <button class="btn-info" onclick="verInfoCliente('123456789')">📝</button>
+      <button class="btn-beneficiarios" onclick="verBeneficiarios('123456789')">👥</button>
+      <button class="btn-cronograma" onclick="verCronograma('123456789')">🕝</button>
+      <button class="btn-deshabilitar" onclick="mostrarSwitch(this)">🔍</button>
+      <label class="switch oculto">
+        <input type="checkbox" onchange="toggleUsuario(this)" checked>
+        <span class="slider"></span>
+      </label>
+      <button class="btn-eliminar" onclick="eliminarUsuario(this)">🗑️</button>
+    </td>
+  </tr>
+
+
+  <!-- Formulario emergente -->
+  <div class="modal-usuario" id="modalUsuario">
+    <div class="modal-contenido">
+      <h3>Agregar Usuario</h3>
+      <form id="formularioUsuario">
+        <div class="campo">
+          <label>Nombres:</label>
+          <input type="text" id="nombres" required />
+        </div>
+        <div class="campo">
+          <label>Apellidos:</label>
+          <input type="text" id="apellidos" required />
+        </div>
+        <div class="campo">
+          <label>Tipo de Documento:</label>
+          <select id="tipoDocumento" required>
+            <option value="">Seleccionar</option>
+            <option value="CC">C.C.</option>
+            <option value="TI">T.I.</option>
+            <option value="CE">C.E.</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label>Número de Documento:</label>
+          <input type="text" id="numeroDocumento" required />
+        </div>
+        <div class="campo">
+          <label>Teléfono (opcional):</label>
+          <input type="text" id="telefono" />
+        </div>
+        <div class="campo">
+          <label>Celular:</label>
+          <input type="text" id="celular" required />
+        </div>
+        <div class="campo">
+          <label>Correo:</label>
+          <input type="email" id="correo" required />
+        </div>
+        <div class="campo">
+          <label>Tipo de Plan:</label>
+          <input type="text" id="plan" required />
+        </div>
+        <div class="campo">
+          <label>Dirección:</label>
+          <input type="text" id="direccion" required />
+        </div>
+        <div class="acciones">
+          <button type="submit">Guardar</button>
+          <button type="button" onclick="cerrarFormularioUsuario()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+        
+
+      </main>
+    </div>
+    <script src="clientes.js"></script>
+  </body>
+  </html>

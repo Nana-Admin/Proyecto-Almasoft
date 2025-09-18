@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | ALMASOFT</title>
+  <link rel="stylesheet" href="usuarios.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <a href="../roles/admin/dashboard.html" class="logo">ALMASOFT</a>
+      <nav class="menu">
+        <button onclick="location.href='../clientes/clientes.html'">Clientes</button>
+        <button onclick="location.href='./usuarios.html'">Usuarios</button>
+        <button onclick="location.href='../categorias/categorias.html'">Categorías</button>
+        <button onclick="location.href='../subcategorias/subcategorias.html'">Subcategorías</button>
+        <button onclick="location.href='../productos/productos.html'">Productos</button>
+        <button onclick="location.href='../compras/compras.html'">Compras</button>
+        <button onclick="location.href='../tramites/tramites.html'">Trámites</button>
+        <button onclick="location.href='../cronograma/cronograma.html'">Cronograma</button>
+        <button onclick="location.href='../reportes/reportes.html'">Reportes</button>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+
+      <!-- Barra superior -->
+      <header class="topbar">
+        <a href="./perfil/perfil.html" class="admin-info">
+          <img src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-256.png" alt="admin">
+          <span class="admin-name">Danny Karine Camacho Romero</span>
+        </a>
+      </header>
+
+      <!-- Selección de tipo de usuario -->
+      <section class="seleccion-usuario">
+        <h1>Selecciona tu tipo de usuario</h1>
+          <div class="acciones-usuario">
+  </div>
+        <div class="cards-usuario">
+          <div class="card asesor" onclick="irA('../usuarios/asesores/asesores.html')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="asesor">
+            <h2>Asesores</h2>
+            <p>Gestiona clientes, ventas y seguimiento de servicios.</p>
+          </div>
+          <div class="card cliente" onclick="irA('../clientes/clientes.html')">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="cliente">
+            <h2>Clientes</h2>
+            <p>Consulta tu información, productos y servicios contratados.</p>
+          </div>
+          <div class="card admin" onclick="irA('../usuarios/administradores/administrador.html')">
+            <img src="https://cdn-icons-png.flaticon.com/512/1053/1053210.png" alt="admin">
+            <h2>Administradores</h2>
+            <p>Administra usuarios, reportes y configuración general.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="usuarios.js"></script>
+</body>
+</html>

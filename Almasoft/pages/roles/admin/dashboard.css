@@ -1,0 +1,530 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Layout principal */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #1e1e2f;
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar nav button:hover {
+  background-color: #2f2f45;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+  margin-left: 220px;
+  padding: 30px;
+  width: calc(100% - 220px);
+  overflow-x: hidden;
+}
+
+/* Barra superior */
+.topbar {
+  background-color: #9900ff;
+  color: #000;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Info admin */
+.admin-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+.admin-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.admin-name {
+  font-weight: bold;
+}
+
+/* BOTONES RESUMEN */
+.central-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.central-buttons button {
+  background: linear-gradient(145deg, #ffffff, #f1f3f6);
+  padding: 20px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: capitalize;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: none;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.central-buttons button:hover {
+  background: #e3e8f0;
+  transform: translateY(-4px);
+}
+
+.central-buttons button i {
+  font-size: 28px;
+  color: #5c6bc0;
+}
+
+/* CARDS RESUMEN */
+.cards-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.cards-summary .card {
+  background: #fff;
+  border-left: 6px solid #9900ff;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.cards-summary .card:hover {
+  background: #f4f0ff;
+  transform: translateY(-3px);
+}
+
+/* GRÁFICA */
+.chart-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.chart-section canvas {
+  width: 100% !important;
+  max-width: 800px;
+  height: 350px !important;
+  margin: auto;
+  display: block;
+}
+
+/* PROGRESS CARDS */
+.progress-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.progress-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ddd;
+  width: 250px;
+  flex: 1;
+}
+
+.progress-bar {
+  background: #eee;
+  height: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  background: #4caf50;
+  height: 100%;
+  color: #fff;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* CLIENTES RECIENTES */
+.recent-clients,
+.alerts,
+.quick-messages,
+.smart-summary {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ddd;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.recent-clients ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-clients li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* ALERTAS */
+.alert {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.alert.red {
+  background: #ffe5e5;
+  color: #d8000c;
+}
+
+.alert.yellow {
+  background: #fff8e1;
+  color: #9f6000;
+}
+
+/* MENSAJES */
+.message {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* RESUMEN INTELIGENTE */
+.smart-summary {
+  background: #f8f8f8;
+  font-size: 16px;
+  font-style: italic;
+  box-shadow: inset 0 0 5px #ccc;
+}.clientes-recientes {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.clientes-recientes h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.lista-clientes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-clientes li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.lista-clientes li:last-child {
+  border-bottom: none;
+}
+
+.lista-clientes .nombre {
+  font-weight: bold;
+  color: #333;
+  width: 30%;
+}
+
+.lista-clientes .correo {
+  color: #777;
+  width: 40%;
+  font-size: 14px;
+}
+
+.lista-clientes .fecha {
+  color: #999;
+  font-size: 13px;
+  width: 20%;
+  text-align: right;
+}
+.alertas {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.alertas h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.alerta {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.alerta strong {
+  margin-right: 8px;
+}
+
+.alerta-roja {
+  background-color: #ffe5e5;
+  color: #b30000;
+  border-left: 5px solid #cc0000;
+}
+
+.alerta-amarilla {
+  background-color: #fff8e5;
+  color: #b38f00;
+  border-left: 5px solid #ffcc00;
+}
+
+.alerta-verde {
+  background-color: #e6ffed;
+  color: #2d7a2d;
+  border-left: 5px solid #33cc66;
+}
+.estadisticas {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.estadisticas h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+canvas#graficoServicios {
+  max-width: 100%;
+}
+.mensajes-rapidos {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+.mensajes-rapidos h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.mensaje {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.mensaje img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.mensaje .contenido {
+  flex: 1;
+}
+
+.nombre-hora {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.mensaje p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+.estadisticas-comparativas {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.estadisticas-comparativas h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.resumen-inteligente {
+  margin-top: 40px;
+  background: linear-gradient(to right, #c963f1, #714ade);
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contenido-resumen {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icono-ia {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.resumen-inteligente h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.resumen-inteligente p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+.accesos-rapidos {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accesos-rapidos h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+.botones-acceso {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.botones-acceso button {
+  flex: 1 1 200px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 15px;
+}
+
+.botones-acceso button:hover {
+  background-color: #4f46e5;
+}
+
+.botones-acceso i {
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

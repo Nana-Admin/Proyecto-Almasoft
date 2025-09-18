@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil del Administrador | ALMASOFT</title>
+  <link rel="stylesheet" href="perfil.css" />
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <a href="../../admin/dashboard.html" class="logo">ALMASOFT</a>
+      <nav class="menu">
+        <button onclick="location.href='../../../clientes/clientes.html'">Clientes</button>
+        <button onclick="location.href='../../../usuarios/usuarios.html'">Usuarios</button>
+        <button onclick="location.href='../../../categorias/categorias.html'">Categorías</button>
+        <button onclick="location.href='../../../subcategorias/subcategorias.html'">Subcategorías</button>
+        <button onclick="location.href='../../../productos/productos.html'">Productos</button>
+        <button onclick="location.href='../../../compras/compras.html'">Compras</button>
+        <button onclick="location.href='../../../tramites/tramites.html'">Trámites</button>
+        <button onclick="location.href='../../../cronograma/cronograma.html'">Cronograma</button>
+        <button onclick="location.href='../../../reportes/reportes.html'">Reportes</button>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="perfil-container">
+
+        <!-- Lado izquierdo -->
+        <div class="perfil-lado-izquierdo">
+          <img id="foto-perfil" src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-256.png" alt="Foto de perfil" />
+          <h2>Administrador</h2>
+          <p id="descripcion">Encargado de la gestión total del sistema ALMASOFT.</p>
+
+          <div class="botones-acciones">
+            <button onclick="habilitarEdicion()">Editar Información</button>
+            <button onclick="cerrarSesion()">Cerrar Sesión</button>
+          </div>
+        </div>
+
+        <!-- Lado derecho -->
+        <div class="perfil-lado-derecho">
+          <form id="formulario-perfil">
+            <label>Nombres: <input type="text" id="nombres" value="Danny Karine" disabled></label>
+            <label>Apellidos: <input type="text" id="apellidos" value="Camacho Romero" disabled></label>
+            <label>Cédula: <input type="text" id="cedula" value="1234567890" disabled></label>
+            <label>Teléfono: <input type="tel" id="telefono" value="3001234567" disabled></label>
+            <label>Correo: <input type="email" id="correo" value="admin@almasoft.com" disabled></label>
+            <label>Dirección: <input type="text" id="direccion" value="Calle Ficticia #123" disabled></label>
+            <label>Fecha de Nacimiento: <input type="date" id="fecha" value="1990-01-01" disabled></label>
+            <label>Género:
+              <select id="genero" disabled>
+                <option value="femenino" selected>Femenino</option>
+                <option value="masculino">Masculino</option>
+                <option value="masculino">Prefiero no decirlo</option>
+                <option value="otro">Otro</option>
+              </select>
+            </label>
+            <div id="botones-guardar-cancelar" style="display: none;">
+              <button type="submit">Guardar Cambios</button>
+              <button type="button" onclick="cancelarEdicion()">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="perfil.js"></script>
+</body>
+</html>
+
+
+
+      
+    
+
